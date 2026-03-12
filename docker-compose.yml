@@ -1,0 +1,10 @@
+services:
+  mr-notify:
+    build: .
+    env_file: .env
+    volumes:
+      - mr-notify-data:/data
+    restart: unless-stopped
+
+volumes:
+  mr-notify-data:

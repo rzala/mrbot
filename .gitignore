@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+dist/
+*.egg-info/
+.env
+*.db
+*.db-wal
+*.db-shm
+data/
+ca-bundle.crt
+Dockerfile.local
+docker-compose.local.yml
+.DS_Store
+Thumbs.db
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Claude Code
+.claude/
+.specify/
+*.jsonl
+specs

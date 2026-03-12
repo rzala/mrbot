@@ -1,0 +1,75 @@
+{
+  "_metadata": {
+    "major_version": 1,
+    "minor_version": 1
+  },
+  "display_information": {
+    "name": "MR Notify",
+    "description": "GitLab merge request notifications for Slack",
+    "background_color": "#FC6D26"
+  },
+  "features": {
+    "bot_user": {
+      "display_name": "MR Notify",
+      "always_online": true
+    },
+    "slash_commands": [
+      {
+        "command": "/mr-subscribe",
+        "description": "Subscribe to MR notifications (--dm for personal DM delivery)",
+        "usage_hint": "<repo> [--dm]",
+        "should_escape": false
+      },
+      {
+        "command": "/mr-unsubscribe",
+        "description": "Remove a subscription (--dm to target your DM subscription)",
+        "usage_hint": "<repo> [--dm]",
+        "should_escape": false
+      },
+      {
+        "command": "/mr-list",
+        "description": "List subscriptions and global settings",
+        "should_escape": false
+      },
+      {
+        "command": "/mr-config",
+        "description": "Configure schedule, poll interval, filters, and alerts",
+        "usage_hint": "<repo> [--dm] [--schedule] [--poll-interval] [--labels] [--branch] [--approvals] [--lifecycle] [--resume]",
+        "should_escape": false
+      },
+      {
+        "command": "/mr-check",
+        "description": "Immediately check for open MRs with approval status",
+        "usage_hint": "[repo] [--dm]",
+        "should_escape": false
+      },
+      {
+        "command": "/mr-admin",
+        "description": "Bot administration (admins only)",
+        "usage_hint": "[--status] [--channel-policy channel|app [repo]]",
+        "should_escape": false
+      },
+      {
+        "command": "/mr-help",
+        "description": "Show all commands, options, and examples",
+        "should_escape": false
+      }
+    ]
+  },
+  "oauth_config": {
+    "scopes": {
+      "bot": [
+        "commands",
+        "chat:write",
+        "im:write",
+        "users:read",
+        "users:read.email"
+      ]
+    }
+  },
+  "settings": {
+    "socket_mode_enabled": true,
+    "org_deploy_enabled": false,
+    "token_rotation_enabled": false
+  }
+}
